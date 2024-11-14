@@ -1,0 +1,31 @@
+id: d358ea65-3b26-40ca-b550-458015e13238
+name: spring-music
+timestamp: 2024-11-14T16:16:43.994616Z
+source: INTELLIJ
+username: risbergt
+fragments:
+  java-version:
+    name: java-version
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples
+      subPath: fragments/java-version
+      ref: main
+  build-wrapper-gradle:
+    name: build-wrapper-gradle
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples
+      subPath: fragments/build-wrapper-gradle
+      ref: main
+accelerator:
+  name: spring-music
+  git:
+    url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+    subPath: spring-music
+    ref: main
+options:
+  databaseType: h2
+  deploymentType: tpfork8s
+  persistenceType: jpa
+  includeBuildToolWrapper: true
+  javaVersion: "21"
+  projectName: h2-music
